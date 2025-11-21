@@ -1,0 +1,173 @@
+:root {
+  --workday-primary: #0073E6;
+  --workday-bg: #F5F5F5;
+  --workday-card: #FFFFFF;
+  --workday-text: #333333;
+  --workday-text-light: #666666;
+  --workday-border: #E5E5E5;
+  --workday-sidebar: #EBEBEB;
+  --workday-hover: #F9F9F9;
+}
+
+.dark {
+  --workday-primary: #4A9EFF;
+  --workday-bg: #1A1A1A;
+  --workday-card: #2A2A2A;
+  --workday-text: #E5E5E5;
+  --workday-text-light: #A0A0A0;
+  --workday-border: #3A3A3A;
+  --workday-sidebar: #222222;
+  --workday-hover: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background-color: var(--workday-bg);
+  color: var(--workday-text);
+  line-height: 1.6;
+}
+
+.workday-app {
+  min-height: 100vh;
+  background-color: var(--workday-bg);
+}
+
+.workday-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+.workday-sidebar {
+  width: 280px;
+  background-color: var(--workday-sidebar);
+  min-height: calc(100vh - 70px);
+}
+
+.workday-content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 900px;
+}
+
+.workday-card {
+  background-color: var(--workday-card);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+}
+
+.workday-header {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--workday-border);
+}
+
+.workday-title {
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--workday-text);
+  margin-bottom: 4px;
+}
+
+.workday-subtitle {
+  font-size: 16px;
+  color: var(--workday-text-light);
+  font-weight: 400;
+}
+
+.workday-step-content {
+  min-height: 400px;
+  padding: 30px 0;
+}
+
+.workday-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid var(--workday-border);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-button-primary {
+  background-color: var(--workday-primary);
+  color: white;
+  border: none;
+}
+
+.nav-button-primary:hover {
+  background-color: #005BB5;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--workday-text);
+  margin-bottom: 24px;
+}
+
+.section-content {
+  color: var(--workday-text);
+  line-height: 1.8;
+}
+
+@media (max-width: 1024px) {
+  .workday-sidebar {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .workday-sidebar {
+    display: none;
+  }
+  
+  .workday-content {
+    max-width: 100%;
+    padding: 20px 15px;
+  }
+  
+  .workday-card {
+    padding: 24px;
+  }
+  
+  .workday-title {
+    font-size: 24px;
+  }
+}
+
+/* Simple button styles used by ui/button.jsx */
+.btn{font-family:inherit;border:1px solid transparent;border-radius:6px;padding:8px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn-default{background:var(--workday-hover);color:var(--workday-text);border-color:var(--workday-border)}
+.btn-outline{background:transparent;border:1px solid var(--workday-border);color:var(--workday-text)}
+.btn-ghost{background:transparent;border:none;color:var(--workday-text)}
+.btn-icon{padding:6px;min-width:40px;justify-content:center}
+.btn-md{padding:8px 12px}
+
+/* Ensure SVG icons inside buttons inherit theme color */
+.btn svg {
+  stroke: currentColor;
+  fill: none;
+}
