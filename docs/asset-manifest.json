@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MyPortfolio_Workday/static/css/main.5e941b41.css",
+    "main.js": "/MyPortfolio_Workday/static/js/main.4c35e80d.js",
+    "index.html": "/MyPortfolio_Workday/index.html",
+    "main.5e941b41.css.map": "/MyPortfolio_Workday/static/css/main.5e941b41.css.map",
+    "main.4c35e80d.js.map": "/MyPortfolio_Workday/static/js/main.4c35e80d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e941b41.css",
+    "static/js/main.4c35e80d.js"
+  ]
+}
